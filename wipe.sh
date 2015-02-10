@@ -8,7 +8,7 @@ for letter in {b..z} ; do
     if [ -b /dev/sd$letter ];
     then
 	echo '!!! WARNING !!! Starting DISK initialization for:'
-        smartctl -a /dev/sd$letter | egrep "Serial|Reallocated|Power_On"
+        smartctl -a /dev/sd$letter | egrep "Serial|Reallocated|Power_On|Reported_Uncorrect|Command_Timeout|Current_Pending_Sector|Offline_Uncorrectable"
         dd if=/dev/zero of=/dev/sd$letter bs=1M count=100
         dd if=/dev/zero of=/dev/sd$letter bs=512 seek=$(($(blockdev --getsz /dev/sd$letter)-65536))
     fi
