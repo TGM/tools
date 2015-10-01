@@ -5,7 +5,7 @@ apt-get upgrade
 
 apt-get install nginx
 apt-get install mysql-server-5.6
-apt-get install php5 php5-mysql php5-mcrypt unzip curl openssl  
+apt-get install php5 php5-cli php5-mysql unzip curl openssl php5-mcrypt 
 
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
