@@ -1,4 +1,4 @@
-tools repo
+Tools repository
 =====
 
-All sort of tools for daily use
+Daily use tools
